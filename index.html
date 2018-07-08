@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="asset/taxi.ico">
+  <title>Taxi Jerry</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="css/anim.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+</head>
+
+
+<body>
+  <script>
+    window.counter = function () {
+      // this refers to the html element with the data-scroll-showCallback tag
+      var span = this.querySelector('span');
+      var current = parseInt(span.textContent);
+      span.textContent = current + 1;
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+      var trigger = new ScrollTrigger({
+        addHeight: true
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.js-scrollTo').on('click', function () { // Au clic sur un élément
+        var page = $(this).attr('href'); // Page cible
+        var speed = 750; // Durée de l'animation (en ms)
+        $('html, body').animate({ scrollTop: $(page).offset().top }, speed); // Go
+        return false;
+      });
+    });
+  </script>
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-lg fa-taxi text-warning p-2"></i>
+        <b class="text-warning p-1">Taxi Jerry&nbsp;</b>
+      </a>
+    </div>
+  </nav>
+  <div class="py-5 text-center cover filter-dark parallax-window" style="background-size:cover;background-repeat:no-repeat;"
+    data-parallax="scroll" data-image-src="asset/cover.jpg">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-4 display-2 text-warning">Taxi Jerry</h1>
+          <p class="lead mb-5">Pingendo is a HTML editor for everyone. Easy for newbies, useful for professionals.
+            <br>Code quality is a must. Pingendo generates clean, battle-tested, modular Bootstrap 4 code. </p>
+          <a href="tel:+68987769930" class="btn btn-warning text-dark btn-lg px-5">Call Jerry</a>
+          <a href="#Contact" class="btn  btn-warning btn-lg px-5 js-scrollTo">Send a mail&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="text-dark col-md-6" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+              <img class="d-block img-fluid" src="asset/photo.jpg" height="a" style=" border-radius: 50%;"> </div>
+            <div class="text-dark col-md-6" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+              <h1 class="text-dark py-3">Nauta Thierry&nbsp;</h1>
+              <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 filter-dark bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="py-2 text-center">Possible route&nbsp;</h1>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-7" data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+          <h2 class="text-primary">Hotel</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-md-5 align-self-center">
+          <img class="img-fluid d-block w-100 img-thumbnail" src="asset/hotel.jpg" data-scroll="toggle(.scaleDownIn, .scaleDownOut)"> </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <img class="img-fluid d-block mb-4 w-100 img-thumbnail" src="asset/activité.jpeg" data-scroll="toggle(.scaleDownIn, .scaleDownOut)"> </div>
+        <div class="col-md-7" data-scroll="toggle(.fromRightIn, .fromRightOut)">
+          <h2 class="text-primary pt-3">Activities</h2>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-white parallax-window" style="background-size:cover;" id="Contact" data-parallax="scroll" data-image-src="asset/cover.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="text-dark text-center">Contact us</h1>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="InputName" class="text-dark">Your name</label>
+              <input type="text" class="form-control" id="InputName" placeholder="Your name" required="required"> </div>
+            <div class="form-group">
+              <label for="InputEmail1">Email address</label>
+              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email" required="required"> </div>
+            <div class="form-group">
+              <label for="Textarea">Write here</label>
+              <textarea class="form-control" id="Textarea" rows="3" placeholder="Type here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="p-4 col-md-4 text-center">
+          <h2 class="mb-4 text-warning">Taxi Jerry</h2>
+          <p class="text-white">A company for whatever you may need, from website prototyping to publishing</p>
+        </div>
+        <div class="p-4 col-md-4 text-center">
+          <h2 class="mb-4 text-warning">Contact</h2>
+          <p>
+            <a href="tel:+68987769930" class="text-white">
+              <i class="fa d-inline mr-3 text-secondary fa-phone"></i>+</a>689 87 76 99 30</p>
+          <p>
+            <a href="mailto:contact@taxi-jerry.com" class="text-white">
+              <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>c</a>ontact@taxi-jerry.com</p>
+          <p>
+            <a href="https://www.google.it/maps/place/Bora+Bora/@-16.5043388,-151.7736689,13z/data=!3m1!4b1!4m5!3m4!1s0x76bdbd188a4a98ab:0x160a089e92d5ce61!8m2!3d-16.5004126!4d-151.7414904?hl=it"
+              class="text-white" target="_blank">
+              <i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>B</a>ora Bora, French Polynesia</p>
+        </div>
+        <div class="p-4 col-md-4 text-center">
+          <h2 class="mb-4 text-warning">We Love Friend</h2>
+          <i class="fa fa-fw fa-facebook text-secondary fa-4x"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white">© Copyright 2018 Powered by
+            <a href="http://f2i-tahiti.com">Fenua Island Informatique</a> &nbsp;- All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
